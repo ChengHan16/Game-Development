@@ -217,5 +217,32 @@ public class Test : MonoBehaviour
 ```
 ## 🔹 C# 陣列
 ```C#
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
+public class Test : MonoBehaviour
+{
+
+    string[] mystring = new string[3] { "boy", "girl", "YEAH" };
+    //string[] mystring = new string[] { "boy", "girl", "YEAH" };
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        /*
+         string a = mystring[0]; //mystring第0個位置的字串放到a裡
+         Debug.Log(a);
+        */
+
+        Debug.Log(mystring[1]);
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+
+}
 ```
