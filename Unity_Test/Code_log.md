@@ -349,3 +349,30 @@ public class Test : MonoBehaviour
 
 }
 ```
+## 🔹 Unity 特有 C# 陣列使用
+### 創建 public string[] mystring2; 後在 Inspector 所屬物件程式套件內有 mystring2 選項,size為陣列數,點選後可自行輸入值
+```C#
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Test : MonoBehaviour
+{
+
+    string[] mystring = new string[3];
+    public string[] mystring2;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        Debug.Log(mystring2[0]);
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+
+}
+```
