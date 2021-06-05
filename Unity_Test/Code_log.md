@@ -427,3 +427,29 @@ public class Test : MonoBehaviour
 
 }
 ```
+## 🔹 C# 在 List 中選取位置插入值
+### 🔹 myList.Insert(插入位置,增加值);
+```C#
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Test : MonoBehaviour
+{
+    public List<int> myList = new List<int>() { 8,2,3,2,6 };
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        myList.Insert(2,99);
+        Debug.Log(myList[0]);
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+
+}
+```
