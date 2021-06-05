@@ -376,3 +376,8 @@ public class Test : MonoBehaviour
 
 }
 ```
+## 🔹 C# List
+### 🔹 陣列不可改變內有幾個值，List可以
+```C#
+
+```
