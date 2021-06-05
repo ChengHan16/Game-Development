@@ -247,3 +247,32 @@ public class Test : MonoBehaviour
 
 }
 ```
+## 🔹 C# 陣列 2方法
+```C#
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Test : MonoBehaviour
+{
+
+    string[] mystring = new string[3];
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        mystring[0] = "boy";
+        mystring[1] = "girl";
+        mystring[2] = "YEAH";
+
+        Debug.Log(mystring[2]);
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+
+}
+```
