@@ -133,7 +133,85 @@ public class Test : MonoBehaviour
 }
 
 ```
-## 🔹 switch 判斷
+## 🔹 switch 判斷 (數值)
 ```C#
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
+public class Test : MonoBehaviour
+{
+    // Start is called before the first frame update
+    void Start()
+    {
+        int a = 2;
+
+        switch (a)
+        {
+            case 1:
+                Debug.Log("a 在預設條件內 a =" + a);
+                break; //break意思,執行完就不會繼續執行,就停止
+
+            case 5:
+                Debug.Log("a 在預設條件內 a =" + a);
+                break;
+
+            case 100:
+                Debug.Log("a 在預設條件內 a =" + a);
+                break;
+
+            default:
+                Debug.Log("a 不在預設條件內 a =" + a);
+                break;
+        }
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+
+}
+```
+## 🔹 switch 判斷 (字串)
+```C#
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Test : MonoBehaviour
+{
+    // Start is called before the first frame update
+    void Start()
+    {
+        string a = "hello";
+
+        switch (a)
+        {
+            case "hello":
+                Debug.Log("a 在預設條件內 a =" + a);
+                break; //break意思,執行完就不會繼續執行,就停止
+
+            case "ketty":
+                Debug.Log("a 在預設條件內 a =" + a);
+                break;
+
+            case "boy":
+                Debug.Log("a 在預設條件內 a =" + a);
+                break;
+
+            default:
+                Debug.Log("a 不在預設條件內 a =" + a);
+                break;
+        }
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+
+}
 ```
