@@ -350,7 +350,7 @@ public class Test : MonoBehaviour
 }
 ```
 ## 🔹 Unity 特有 C# array 陣列使用
-### 🔹 創建 public string[] mystring2; 後在 Inspector 所屬物件程式套件內有 mystring2 選項, <br> &emsp;&thinsp; size為陣列數,點選後可自行輸入值
+### 🔸 創建 public string[] mystring2; 後在 Inspector 所屬物件程式套件內有 mystring2 選項, <br> &emsp;&thinsp; size為陣列數,點選後可自行輸入值
 ```C#
 using System.Collections;
 using System.Collections.Generic;
@@ -377,7 +377,7 @@ public class Test : MonoBehaviour
 }
 ```
 ## 🔹 C# List 清單
-### 🔹 陣列不可改變內有幾個值，List 可以
+### 🔸 陣列不可改變內有幾個值，List 可以
 ```C#
 using System.Collections;
 using System.Collections.Generic;
@@ -402,7 +402,7 @@ public class Test : MonoBehaviour
 }
 ```
 ## 🔹 C# List 清單 加值 .add
-### 🔹 執行後 List 加入所 .add 的值
+### 🔸 執行後 List 加入所 .add 的值
 ```C#
 using System.Collections;
 using System.Collections.Generic;
@@ -428,7 +428,7 @@ public class Test : MonoBehaviour
 }
 ```
 ## 🔹 C# 在 List 中選取位置插入值
-### 🔹 myList.Insert(插入位置,增加值);
+### 🔸 myList.Insert(插入位置,增加值);
 ```C#
 using System.Collections;
 using System.Collections.Generic;
@@ -442,6 +442,32 @@ public class Test : MonoBehaviour
     void Start()
     {
         myList.Insert(2,99);
+        Debug.Log(myList[0]);
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+
+}
+```
+## 🔷 C# 在 List 中移除指定位置的值
+### 🔸 myList.RemoveAt(移除位置);
+```C#
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Test : MonoBehaviour
+{
+    public List<int> myList = new List<int>() { 8,2,3,2,6 };
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        myList.RemoveAt(2);
         Debug.Log(myList[0]);
     }
 
