@@ -479,4 +479,4 @@ public class Test : MonoBehaviour
 
 }
 ```
-### 🔸 RemoveAt & Remove 不同處 <br> &emsp;&thinsp; Remove 會從 List 將第一個 2 刪除掉,而後相同的2不會被刪除
+### ⚠ RemoveAt & Remove 不同處 <br> &emsp;&thinsp; Remove 會從 List 將第一個 2 刪除掉,而後相同的2不會被刪除
