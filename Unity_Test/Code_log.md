@@ -215,3 +215,7 @@ public class Test : MonoBehaviour
 
 }
 ```
+## 🔹 C# 陣列
+```C#
+
+```
