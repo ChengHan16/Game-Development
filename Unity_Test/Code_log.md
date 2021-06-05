@@ -401,3 +401,29 @@ public class Test : MonoBehaviour
 
 }
 ```
+## 🔹 C# List 清單 加值 .add
+### 🔹 執行後 List 加入所 .add 的值
+```C#
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Test : MonoBehaviour
+{
+    public List<int> myList = new List<int>() { 8,2,3,2,6 };
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        myList.Add(9);
+        Debug.Log(myList[0]);
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+
+}
+```
