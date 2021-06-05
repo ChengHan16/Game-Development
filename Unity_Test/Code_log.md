@@ -479,7 +479,7 @@ public class Test : MonoBehaviour
 
 }
 ```
-### ⚠ RemoveAt & Remove 不同處 <br> &emsp;&thinsp; Remove 會從 List 將第一個 2 刪除掉,而後相同的2不會被刪除
+### ⚠ RemoveAt & Remove 不同處 <br> &emsp;&thinsp;&thinsp; Remove 會從 List 將第一個 2 刪除掉,而後相同的2不會被刪除
 ## C# 判斷 List 有無特定數值
 ### 🔸 bool b = myList.Contains(88); //執行後就會尋找有無88,Contains是一個布林值
 ```C# 
