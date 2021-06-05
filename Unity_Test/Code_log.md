@@ -81,3 +81,55 @@ public class Test : MonoBehaviour
 
 }
 ```
+## If, else, &&, || 多判斷
+```C#
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Test : MonoBehaviour
+{
+    // Start is called before the first frame update
+    void Start()
+    {
+        int a = 11;
+        bool b = true;
+        int c = 2;
+
+        // >
+        // <
+        // >=
+        // <=
+        // ==
+        // !=
+        // || 或者,其中一個成立就會執行
+        // && 而且,要符合條件才會執行
+        
+        if(a == 10 && b == true || c ==1)
+        {
+            Debug.Log("YEAH");
+        }
+
+        /*if (a > 10)
+        {
+            Debug.Log("a>10");
+        }
+        else if(a > 5)
+        {
+            Debug.Log("a>5");
+        }
+        else
+        {
+            Debug.Log("a<=5");
+        }*/
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+
+}
+
+```
