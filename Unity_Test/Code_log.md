@@ -216,7 +216,7 @@ public class Test : MonoBehaviour
 
 }
 ```
-## 🔹 C# 陣列
+## 🔹 C# 陣列 1-1
 ```C#
 using System.Collections;
 using System.Collections.Generic;
@@ -247,7 +247,7 @@ public class Test : MonoBehaviour
 
 }
 ```
-## 🔹 C# 陣列 2方法
+## 🔹 C# 陣列 1-1 2方法
 ```C#
 using System.Collections;
 using System.Collections.Generic;
@@ -266,6 +266,45 @@ public class Test : MonoBehaviour
         mystring[2] = "YEAH";
 
         Debug.Log(mystring[2]);
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+
+}
+```
+## 🔹 C# 陣列 1-2
+```C#
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Test : MonoBehaviour
+{
+
+    string[] mystring = new string[3];
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        mystring[0] = "boy";
+        mystring[1] = "girl";
+        mystring[2] = "YEAH";
+
+        Debug.Log("第一次給值：mystring[0] = " + mystring[0]);
+        Debug.Log("第一次給值：mystring[0] = " + mystring[1]);
+        Debug.Log("第一次給值：mystring[0] = " + mystring[2]);
+
+        mystring[0] = "man";
+        mystring[1] = "woman";
+        mystring[2] = "yes";
+
+        Debug.Log("第一次給值：mystring[0] = " + mystring[0]);
+        Debug.Log("第一次給值：mystring[0] = " + mystring[1]);
+        Debug.Log("第一次給值：mystring[0] = " + mystring[2]);
     }
 
     // Update is called once per frame
