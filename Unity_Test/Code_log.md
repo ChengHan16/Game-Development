@@ -379,5 +379,25 @@ public class Test : MonoBehaviour
 ## 🔹 C# List 清單
 ### 🔹 陣列不可改變內有幾個值，List 可以
 ```C#
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
+public class Test : MonoBehaviour
+{
+    public List<int> myList = new List<int>() { 8,2,3,2,6 };
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        Debug.Log(myList[0]);
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+
+}
 ```
