@@ -36,7 +36,7 @@ public class Test : MonoBehaviour
 }
 
 ```
-## 有參數&回傳的函式
+## 🔹 有參數&回傳的函式
 ```C#
 using System.Collections;
 using System.Collections.Generic;
@@ -81,7 +81,7 @@ public class Test : MonoBehaviour
 
 }
 ```
-## If, else, &&, || 多判斷
+## 🔹 If, else, &&, || 多判斷
 ```C#
 using System.Collections;
 using System.Collections.Generic;
@@ -131,5 +131,9 @@ public class Test : MonoBehaviour
     }
 
 }
+
+```
+## 🔹 switch 判斷
+```C#
 
 ```
