@@ -315,3 +315,37 @@ public class Test : MonoBehaviour
 
 }
 ```
+## 🔹 C# 查看陣列內有多少資料
+```C#
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Test : MonoBehaviour
+{
+
+    string[] mystring = new string[3];
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        mystring[0] = "boy";
+        mystring[1] = "girl";
+        mystring[2] = "YEAH";
+
+        /*
+        int a = mystring.Length;
+        Debug.Log(a);
+        */
+        
+        Debug.Log(mystring.Length);
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+
+}
+```
