@@ -216,7 +216,7 @@ public class Test : MonoBehaviour
 
 }
 ```
-## 🔹 C# 陣列 1-1
+## 🔹 C# array 陣列 1-1
 ```C#
 using System.Collections;
 using System.Collections.Generic;
@@ -247,7 +247,7 @@ public class Test : MonoBehaviour
 
 }
 ```
-## 🔹 C# 陣列 1-1 2方法
+## 🔹 C# array 陣列 1-1 2方法
 ```C#
 using System.Collections;
 using System.Collections.Generic;
@@ -276,7 +276,7 @@ public class Test : MonoBehaviour
 
 }
 ```
-## 🔹 C# 陣列 1-2
+## 🔹 C# array 陣列 1-2
 ```C#
 using System.Collections;
 using System.Collections.Generic;
@@ -315,7 +315,7 @@ public class Test : MonoBehaviour
 
 }
 ```
-## 🔹 C# 查看陣列內有多少資料
+## 🔹 C# array 查看陣列內有多少資料
 ```C#
 using System.Collections;
 using System.Collections.Generic;
@@ -349,7 +349,7 @@ public class Test : MonoBehaviour
 
 }
 ```
-## 🔹 Unity 特有 C# 陣列使用
+## 🔹 Unity 特有 C# array 陣列使用
 ### 🔹 創建 public string[] mystring2; 後在 Inspector 所屬物件程式套件內有 mystring2 選項, <br> &emsp;&thinsp; size為陣列數,點選後可自行輸入值
 ```C#
 using System.Collections;
@@ -376,7 +376,7 @@ public class Test : MonoBehaviour
 
 }
 ```
-## 🔹 C# List
+## 🔹 C# List 清單
 ### 🔹 陣列不可改變內有幾個值，List 可以
 ```C#
 
