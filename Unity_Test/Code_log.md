@@ -480,3 +480,29 @@ public class Test : MonoBehaviour
 }
 ```
 ### ⚠ RemoveAt & Remove 不同處 <br> &emsp;&thinsp; Remove 會從 List 將第一個 2 刪除掉,而後相同的2不會被刪除
+## C# 判斷 List 有無特定數值
+### 🔸 bool b = myList.Contains(88); //執行後就會尋找有無88,Contains是一個布林值
+```C# 
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Test : MonoBehaviour
+{
+    public List<int> myList = new List<int>() { 8,2,3,2,6 };
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        bool b = myList.Contains(88); //執行後就會尋找有無88,Contains是一個布林值
+        Debug.Log(b);
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+
+}
+```
