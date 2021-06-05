@@ -532,3 +532,28 @@ public class Test : MonoBehaviour
 
 }
 ```
+## 🔷 C# 將 List 內值清除
+### 🔸 myList.Clear();
+```C#
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Test : MonoBehaviour
+{
+    public List<int> myList = new List<int>() { 8,2,3,2,6 };
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        myList.Clear();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+
+}
+```
