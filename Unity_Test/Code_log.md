@@ -769,3 +769,4 @@ public class Test : MonoBehaviour
 
 }
 ```
+### 🔸 Coroutine 寫法差異 <br> &emsp;&thinsp;&thinsp; StartCoroutine("MyPrint"); //此方法可以隨時停止Coroutine <br> &emsp;&thinsp;&thinsp; StopCoroutine("MyPrint");
