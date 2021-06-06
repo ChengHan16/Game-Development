@@ -703,3 +703,69 @@ public class Test : MonoBehaviour
 
 }
 ```
+## 🔷 C#-Coroutines協程 (延後程式碼的執行)
+```C#
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Test : MonoBehaviour
+{
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        //Debug.Log("YEAH");
+        StartCoroutine("MyPrint");
+    }
+
+    IEnumerator MyPrint()
+    {
+        yield return new WaitForSeconds(2f);
+        Debug.Log("YEAH");
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+
+}
+```
+## 🔷 C#-Coroutines協程 (延後程式碼的執行) 多個
+```C#
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Test : MonoBehaviour
+{
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        Debug.Log("馬上列印");
+        StartCoroutine("MyPrint");
+    }
+
+    IEnumerator MyPrint()
+    {
+        yield return new WaitForSeconds(2f);
+        Debug.Log("等待兩秒");
+
+        yield return new WaitForSeconds(2f);
+        Debug.Log("等待四秒");
+
+        yield return new WaitForSeconds(2f);
+        Debug.Log("等待六秒");
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+
+}
+```
