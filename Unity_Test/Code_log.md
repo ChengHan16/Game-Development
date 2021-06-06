@@ -821,3 +821,65 @@ public class MyCharacter
     }
 }
 ```
+## 🔷 C#-類別與物件Class and Object 自行輸入值
+### `Test.cs`
+```C#
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Test : MonoBehaviour
+{
+
+    //C#物件導向程式
+    //用程式碼做出虛擬物件
+    //也可稱虛擬物件為實體(instance)
+    //因為把程式碼寫在Class裡
+    //所以Class又稱物件的藍圖
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        MyCharacter _myChar = new MyCharacter("player2",510,410);
+        _myChar.mystate(); //需要列印結果加上這行
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+
+}
+```
+### `MyCharacter.cs`
+```C#
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class MyCharacter
+{
+    string name;
+    int health;
+    int speed;
+
+    public MyCharacter(string name,int health,int speed)
+    {
+        this.name = name;
+        this.health = health;
+        this.speed = speed;
+    }
+
+    public void mystate()
+    {
+        Debug.Log("初始化了");
+        Debug.Log("name = " + name);
+        Debug.Log("health = " + health);
+        Debug.Log("speed = " + speed);
+    }
+
+}
+
+```
