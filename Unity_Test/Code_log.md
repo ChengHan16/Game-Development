@@ -583,7 +583,7 @@ public class Test : MonoBehaviour
 
 }
 ```
-## 🔷 C# 使用 for 迴圈給陣列值
+## 🔷 C# 使用 for 迴圈給陣列值 1-1
 ```C#
 using System.Collections;
 using System.Collections.Generic;
@@ -597,6 +597,35 @@ public class Test : MonoBehaviour
     void Start()
     {
         for (int i = 0; i<3; i++)
+        {
+            myInt[i] = i + 1;
+            Debug.Log(myInt[i]);
+        }
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+
+}
+```
+## 🔷 C# 使用 for 迴圈給陣列值 1-2
+### 🔸 for (int i = 0; i<myInt.Length; i++), 比較大小使用.Length 是一樣結果,抓取上方 int[] myInt = new int[5];
+```C#
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Test : MonoBehaviour
+{
+
+    int[] myInt = new int[5];
+    // Start is called before the first frame update
+    void Start()
+    {
+        for (int i = 0; i<myInt.Length; i++)
         {
             myInt[i] = i + 1;
             Debug.Log(myInt[i]);
