@@ -1030,7 +1030,7 @@ public class MyCharacter
     }
 }
 ```
-## 🔷 C#-封裝Encapsulation
+## 🔷 C#-封裝Encapsulation 將物件設為 private ,使用Get讀取資料
 ### `Test.cs`
 ```C#
 using System.Collections;
