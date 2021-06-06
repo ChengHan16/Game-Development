@@ -1172,8 +1172,37 @@ public class Car : MonoBehaviour
     }
 }
 ```
-## 🔷 判斷按下哪個按鍵
+## 🔷 判斷按下哪個按鍵 (input
+### 🔸 需要在寫在 Update 內
 ```C#
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Car : MonoBehaviour
+{
+    SpriteRenderer mySR2;
+    
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        mySR2 = GameObject.Find("Circle").GetComponent<SpriteRenderer>();
+        //若Circle在Main Camera資料下的話要改寫以下
+        //mySR2 = GameObject.Find("Main Camera/Circle")
+
+        mySR2.color = Color.blue;
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            Debug.Log("LeftArrow is pressed");
+        }
+    }
+}
 
 ```
 ---
