@@ -1117,3 +1117,37 @@ public class MyCharacter
     }
 }
 ```
+## 🔷 C# 委託Delegate
+```C#
+
+```
+## 🔷 GetComponent 基本用法
+```C#
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Test : MonoBehaviour
+{
+    SpriteRenderer mySR;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        mySR = GetComponent<SpriteRenderer>();
+        mySR.color = Color.green;
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+
+}
+```
+
+---
+# 參考資料
+### Unity API
+> https://docs.unity3d.com/ScriptReference/SpriteRenderer-color.html
