@@ -671,3 +671,35 @@ public class Test : MonoBehaviour
 
 }
 ```
+## 🔷 C# 使用 while 迴圈 運作與 for 迴圈一樣的方法 
+```C#
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Test : MonoBehaviour
+{
+
+    int[] myInt = new int[3];
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        int a = 0;
+        while (a < 3 )
+        {
+            myInt[a] = a + 1;
+            Debug.Log(myInt[a]);
+            a++;
+            //最後記得設定跳出程式的條件
+        }
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+
+}
+```
