@@ -956,6 +956,7 @@ public class MyCharacter
 ### 🔸 型別補充 <br> &emsp;&thinsp;&thinsp; public 公開所有都可使用 <br> &emsp;&thinsp;&thinsp; private 私有,其他class不可使用 <br> &emsp;&thinsp;&thinsp; protected 只有繼承者才能使用
 
 ## 🔷 C#-繼承Inheritance 1-2
+### 🔸 說明：當呼叫 Hero  時會先執行 MyCharacter 內的 myState,再去執行 class Hero 內的程式
 ### `Test.cs`
 ```C#
 using System.Collections;
