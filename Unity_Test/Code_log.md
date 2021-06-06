@@ -557,3 +557,57 @@ public class Test : MonoBehaviour
 
 }
 ```
+## 🔷 C# for 迴圈
+```C#
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Test : MonoBehaviour
+{
+    
+    // Start is called before the first frame update
+    void Start()
+    {
+        for (int a = 0; a<5; a++)
+        {
+            Debug.Log("列印第"+ a + "次結果" + a);
+        }
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+
+}
+```
+## 🔷 C# 使用 for 迴圈給陣列值
+```C#
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Test : MonoBehaviour
+{
+
+    int[] myInt = new int[3];
+    // Start is called before the first frame update
+    void Start()
+    {
+        for (int i = 0; i<3; i++)
+        {
+            myInt[i] = i + 1;
+            Debug.Log(myInt[i]);
+        }
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+
+}
+```
