@@ -640,3 +640,34 @@ public class Test : MonoBehaviour
 
 }
 ```
+## 🔷 C# while 迴圈
+### 🔸 最後記得設定跳出程式的條件
+```C#
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Test : MonoBehaviour
+{
+
+    bool mybool = true;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        while (mybool == true)
+        {
+            Debug.Log("mybool = true");
+            mybool = false;
+            //最後記得設定跳出程式的條件
+        }
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+
+}
+```
