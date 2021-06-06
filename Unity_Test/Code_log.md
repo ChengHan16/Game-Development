@@ -1245,7 +1245,7 @@ public class Car : MonoBehaviour
 
 }
 ```
-## 🔷 C# 委託 Delegate 
+## 🔷 C# 委託 Delegate 1-1
 ### 🔸 與其他程式的 Delegate 做連結
 ### `Test.cs`
 ```C#
@@ -1286,6 +1286,77 @@ public class Car : MonoBehaviour
 {
     public delegate void MyDelegate(int a);
     public MyDelegate myDelegate;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        myDelegate += Num1;
+        myDelegate += Num2;
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            myDelegate(5);
+        }
+    }
+    
+    void Num1(int a)
+    {
+        Debug.Log("Num1 = " + a);
+    }
+
+    void Num2(int a)
+    {
+        Debug.Log("Num2 = " + a *2);
+    }
+
+}
+```
+## 🔷 C# 委託 Delegate 1-2
+### 🔸 通常作法 會將 MyDelegate 設為靜態事件 <br> &emsp;&thinsp;&thinsp; public static event MyDelegate myDelegate;
+### `Test.cs`
+```C#
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Test : MonoBehaviour
+{
+    SpriteRenderer mySR;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        //GameObject.Find("Car").GetComponent<Car>().myDelegate += Num3;
+        Car.myDelegate += Num3;
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+
+    void Num3(int a)
+    {
+        Debug.Log("Num3 = " + a * 3);
+    }
+
+}
+```
+### `Car.cs`
+```C#
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Car : MonoBehaviour
+{
+    public delegate void MyDelegate(int a);
+    public static event MyDelegate myDelegate;
 
     // Start is called before the first frame update
     void Start()
