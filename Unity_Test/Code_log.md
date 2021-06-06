@@ -770,3 +770,54 @@ public class Test : MonoBehaviour
 }
 ```
 ### 🔸 Coroutine 寫法差異 <br> &emsp;&thinsp;&thinsp; StartCoroutine("MyPrint"); //此方法可以隨時停止Coroutine <br> &emsp;&thinsp;&thinsp; StopCoroutine("MyPrint"); <br> &emsp;&thinsp;&thinsp; StartCoroutine(MyPrint()); //此方法無法停止
+## 🔷 C#-類別與物件Class and Object
+### `Test.cs`
+```C#
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Test : MonoBehaviour
+{
+
+    //C#物件導向程式
+    //用程式碼做出虛擬物件
+    //也可稱虛擬物件為實體(instance)
+    //因為把程式碼寫在Class裡
+    //所以Class又稱物件的藍圖
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        MyCharacter _myChar = new MyCharacter();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+
+}
+```
+### `MyCharacter.cs`
+```C#
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class MyCharacter
+{
+    string name;
+    int health;
+    int speed;
+
+    public MyCharacter()
+    {
+        name = "hero";
+        health = 100;
+        speed = 50;
+        Debug.Log("初始化了");
+    }
+}
+```
