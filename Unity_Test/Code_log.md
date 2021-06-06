@@ -881,5 +881,8 @@ public class MyCharacter
     }
 
 }
+```
+## 🔷 C#-繼承Inheritance
+```C#
 
 ```
