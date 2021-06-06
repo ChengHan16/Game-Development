@@ -1030,3 +1030,7 @@ public class MyCharacter
     }
 }
 ```
+## 🔷 C#-封裝Encapsulation
+```C#
+
+```
