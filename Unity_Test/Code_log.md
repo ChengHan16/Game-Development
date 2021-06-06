@@ -1205,6 +1205,47 @@ public class Car : MonoBehaviour
 }
 
 ```
+## 🔷 C# 委託Delegate 
+### 🔸 當我按下左方向鍵時會執行 myDelegate 並且是有帶參數的值 Ex.5
+```C#
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Car : MonoBehaviour
+{
+    public delegate void MyDelegate(int a);
+    public MyDelegate myDelegate;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        myDelegate += Num1;
+        myDelegate += Num2;
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            myDelegate(5);
+        }
+    }
+    
+    void Num1(int a)
+    {
+        Debug.Log("Num1 = " + a);
+    }
+
+    void Num2(int a)
+    {
+        Debug.Log("Num2 = " + a *2);
+    }
+
+}
+```
+
 ---
 # 參考資料
 ### Unity API
