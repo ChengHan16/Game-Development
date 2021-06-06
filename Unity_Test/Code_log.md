@@ -1316,7 +1316,7 @@ public class Car : MonoBehaviour
 }
 ```
 ## 🔷 C# 委託 Delegate 1-2
-### 🔸 通常作法 會將 MyDelegate 設為靜態事件 <br> &emsp;&thinsp;&thinsp; public static event MyDelegate myDelegate;
+### 🔸 通常作法 會將 MyDelegate 設為靜態事件 <br> &emsp;&thinsp;&thinsp; public static event MyDelegate myDelegate; 此方式電腦會為 MyDelegate 做一個實體
 ### `Test.cs`
 ```C#
 using System.Collections;
