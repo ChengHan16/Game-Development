@@ -1031,6 +1031,89 @@ public class MyCharacter
 }
 ```
 ## 🔷 C#-封裝Encapsulation
+### `Test.cs`
 ```C#
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
+public class Test : MonoBehaviour
+{
+    // Start is called before the first frame update
+    void Start()
+    {
+        Hero myhero = new Hero();
+        //myhero.mystate(); //列印myhero內的mystate資料
+
+        Debug.Log(myhero.GetName()); //指讀取到myhero內的name
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+
+}
+```
+### `Hero.cs`
+```C#
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Hero : MyCharacter
+{
+    
+}
+```
+### `MyCharacter.cs`
+```C#
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class MyCharacter
+{
+    private string name;
+    private int health;
+    private int speed;
+
+    public MyCharacter()
+    {
+        name = "MyHero";
+        health = 10;
+        speed = 1;
+    }
+
+    public void SetMyCharacter(string name,int health,int speed)
+    {
+        this.name = name;
+        this.health = health;
+        this.speed = speed;
+    }
+
+    public string GetName()
+    {
+        return this.name;
+    }
+
+    public int GetHealth()
+    {
+        return this.health;
+    }
+
+    public int Speed()
+    {
+        return this.speed;
+    }
+
+    public virtual void mystate()
+    {
+        Debug.Log("初始化了");
+        Debug.Log("name = " + name);
+        Debug.Log("health = " + health);
+        Debug.Log("speed = " + speed);
+    }
+}
 ```
