@@ -1118,9 +1118,7 @@ public class MyCharacter
 }
 ```
 ## 🔷 C# 委託Delegate
-```C#
 
-```
 ## 🔷 GetComponent 基本用法
 ```C#
 using System.Collections;
@@ -1144,6 +1142,34 @@ public class Test : MonoBehaviour
         
     }
 
+}
+```
+## 🔷 利用其他物件&程式改變另其他物件顏色 (GetComponent
+```C#
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Car : MonoBehaviour
+{
+    SpriteRenderer mySR2;
+    
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        mySR2 = GameObject.Find("Circle").GetComponent<SpriteRenderer>();
+        //若Circle在Main Camera資料下的話要改寫以下
+        //mySR2 = GameObject.Find("Main Camera/Circle")
+
+        mySR2.color = Color.blue;
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
 }
 ```
 
