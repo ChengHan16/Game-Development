@@ -955,16 +955,77 @@ public class MyCharacter
 ```
 ### 🔸 型別補充 <br> &emsp;&thinsp;&thinsp; public 公開所有都可使用 <br> &emsp;&thinsp;&thinsp; private 私有,其他class不可使用 <br> &emsp;&thinsp;&thinsp; protected 只有繼承者才能使用
 
-
+## 🔷 C#-繼承Inheritance 1-2
 ### `Test.cs`
 ```C#
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
+public class Test : MonoBehaviour
+{
+    // Start is called before the first frame update
+    void Start()
+    {
+        Hero myhero = new Hero();
+        myhero.SetMyCharacter("myHero",100,50);
+        myhero.mystate();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+
+}
 ```
 ### `Hero.cs`
 ```C#
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
+public class Hero : MyCharacter
+{
+    public override void mystate()
+    {
+        base.mystate();
+
+        Debug.Log("BBBBB");
+    }
+}
 ```
 ### `MyCharacter.cs`
 ```C#
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
+public class MyCharacter
+{
+    public string name;
+    private int health;
+    protected int speed;
+
+    public MyCharacter()
+    {
+
+    }
+
+    public void SetMyCharacter(string name,int health,int speed)
+    {
+        this.name = name;
+        this.health = health;
+        this.speed = speed;
+    }
+
+    public virtual void mystate()
+    {
+        Debug.Log("初始化了");
+        Debug.Log("name = " + name);
+        Debug.Log("health = " + health);
+        Debug.Log("speed = " + speed);
+    }
+}
 ```
