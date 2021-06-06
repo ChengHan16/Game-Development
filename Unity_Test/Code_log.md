@@ -883,6 +883,88 @@ public class MyCharacter
 }
 ```
 ## 🔷 C#-繼承Inheritance
+### `Test.cs`
+```C#
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Test : MonoBehaviour
+{
+    // Start is called before the first frame update
+    void Start()
+    {
+        Hero myhero = new Hero();
+        myhero.SetMyCharacter("myHero",100,50);
+        myhero.mystate();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+
+}
+```
+### `Hero.cs`
+```C#
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Hero : MyCharacter //Error:當被繼承時，是不帶有任何參數,
+                                //當前Hero已繼承MyCharacter
+{
+
+}
+```
+### `MyCharacter.cs`
+```C#
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class MyCharacter
+{
+    string name;
+    int health;
+    int speed;
+
+    public MyCharacter()
+    {
+
+    }
+
+    public void SetMyCharacter(string name,int health,int speed)
+    {
+        this.name = name;
+        this.health = health;
+        this.speed = speed;
+    }
+
+    public void mystate()
+    {
+        Debug.Log("初始化了");
+        Debug.Log("name = " + name);
+        Debug.Log("health = " + health);
+        Debug.Log("speed = " + speed);
+    }
+
+}
+```
+
+
+
+### `Test.cs`
+```C#
+
+```
+### `Hero.cs`
+```C#
+
+```
+### `MyCharacter.cs`
 ```C#
 
 ```
