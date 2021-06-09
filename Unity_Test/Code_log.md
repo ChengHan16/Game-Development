@@ -1347,7 +1347,7 @@ public class Test : MonoBehaviour
 
 }
 ```
-### `Car.cs`
+## `Car.cs`
 ```C#
 using System.Collections;
 using System.Collections.Generic;
@@ -1387,7 +1387,7 @@ public class Car : MonoBehaviour
 }
 ```
 ---
-### `Player`
+## `Player`
 ```C#
 using System.Collections;
 using System.Collections.Generic;
@@ -1420,7 +1420,7 @@ public class Player : MonoBehaviour
     }
 }
 ```
-### `player` 3-6 新增動畫與切換動畫
+### 🔷 `player` 3-6 新增動畫與切換動畫
 ```C#
 using System.Collections;
 using System.Collections.Generic;
@@ -1453,6 +1453,96 @@ public class Player : MonoBehaviour
         myAnim.SetFloat("Run", Mathf.Abs(a));
         float temp = transform.position.x + a * Time.deltaTime * mySpeed;
         transform.position = new Vector3(temp, transform.position.y, transform.position.z);
+
+    }
+}
+```
+## 🔷 p86
+```C#
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Player : MonoBehaviour
+{
+
+    public float mySpeed;
+    Animator myAnim;
+
+    private void Awake() //程式執行後是第一個被調動的程式
+    {
+        myAnim = GetComponent<Animator>();
+    }
+
+    void Start()
+    {
+     
+    }
+
+    void Update()
+    {
+        //float a = Input.GetAxis("Horizontal");
+        float a = Input.GetAxisRaw("Horizontal");
+        if (a > 0)
+        {
+            transform.localScale = new Vector3(1f, 1f, 1f);
+        }
+        else if (a < 0)
+        {
+            transform.localScale = new Vector3(-1f, 1f, 1f);
+        }
+
+        myAnim.SetFloat("Run", Mathf.Abs(a));
+        float temp = transform.position.x + a * Time.deltaTime * mySpeed;
+        transform.position = new Vector3(temp, transform.position.y, transform.position.z);
+
+    }
+}
+```
+## 🔷 p87
+### 🔸 產生問題 &emsp;&thinsp;&thinsp; 角色左右時無動畫,上&下才有 &emsp;&thinsp;&thinsp; myAnim.SetFloat("Run", Mathf.Abs(a)); 此段有衝需用 if 判斷式解決
+```C#
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Player : MonoBehaviour
+{
+
+    public float mySpeed;
+    Animator myAnim;
+
+    private void Awake() //程式執行後是第一個被調動的程式
+    {
+        myAnim = GetComponent<Animator>();
+    }
+
+    void Start()
+    {
+     
+    }
+
+    void Update()
+    {
+        float a = Input.GetAxisRaw("Horizontal");
+        float b = Input.GetAxisRaw("Vertical");
+
+        if (a > 0)
+        {
+            transform.localScale = new Vector3(1f, 1f, 1f);
+        }
+        else if (a < 0)
+        {
+            transform.localScale = new Vector3(-1f, 1f, 1f);
+        }
+
+        myAnim.SetFloat("Run", Mathf.Abs(a));
+        myAnim.SetFloat("Run", Mathf.Abs(b));
+
+        float temp = transform.position.x + a * Time.deltaTime * mySpeed;
+        float tempY = transform.position.y + b * Time.deltaTime * mySpeed;
+
+        transform.position = new Vector3(temp, tempY, transform.position.z);
 
     }
 }
