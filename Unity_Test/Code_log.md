@@ -1500,7 +1500,7 @@ public class Player : MonoBehaviour
 }
 ```
 ## 🔷 p87
-### 🔸 產生問題 <br> &emsp;&thinsp; 角色左右時無動畫,上&下才有 <br> &emsp;&thinsp; myAnim.SetFloat("Run", Mathf.Abs(a)); 此段有衝需用 if 判斷式解決
+### 🔸 產生問題 <br> &emsp;&thinsp; 角色左右時無動畫,上&下才有 <br> &emsp;&thinsp; myAnim.SetFloat("Run", Mathf.Abs(a)); 此段有衝突需用 if 判斷式解決
 ```C#
 using System.Collections;
 using System.Collections.Generic;
