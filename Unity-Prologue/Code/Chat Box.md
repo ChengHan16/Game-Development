@@ -81,8 +81,110 @@ public class Sign : MonoBehaviour
         }
     }
 }
-
 ```
+### 多層對話模式
+```C#
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class Sign : MonoBehaviour
+{
+    Vector3 OpenPosition;
+
+    public GameObject dialogBox;
+    public Text dialogBoxText;
+    public string signText, signText1;
+    private bool isPlayerOnSign, chatOpen;
+
+    public int chatarray;
+
+    GameObject myPlayer, myChatItem;
+
+    private void Awake()
+    {
+        isPlayerOnSign = false;
+        chatOpen = false;
+        chatarray = 0;
+
+        myPlayer = GameObject.Find("Player");
+        myChatItem = GameObject.Find("co-Star-1/Box-chat-Item");
+    }
+
+    private void Start()
+    {
+        myChatItem.gameObject.transform.parent = null;
+    }
+
+    void Update()
+    {
+        if(myPlayer.transform.position.x <= transform.position.x)
+        {
+            transform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);
+        }
+        else if (myPlayer.transform.position.x >= transform.position.x)
+        {
+            transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
+        }
+
+        OpenPosition = new Vector3(transform.position.x + 4.0f, transform.position.y + 4.0f, transform.position.z);
+        dialogBox.transform.position = OpenPosition;
+
+        if (Input.GetKeyDown(KeyCode.Return) && isPlayerOnSign || Input.GetKeyDown(KeyCode.KeypadEnter) && isPlayerOnSign)
+        {
+            dialogBox.SetActive(true);
+            myChatItem.SetActive(false);
+            chatarray += 1;
+        }
+
+        foreach (KeyCode vKey in System.Enum.GetValues(typeof(KeyCode)))
+        {
+            if (Input.GetKey(vKey))
+            {
+                //your code here
+                Debug.Log(vKey);
+            }
+        }
+
+        if (chatOpen)
+        {
+            if (chatarray == 1)
+            {
+                dialogBoxText.text = signText;
+            }
+            else if (chatarray == 2)
+            {
+                dialogBoxText.text = signText1;
+            }
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Player") 
+            && other.GetType().ToString() == "UnityEngine.BoxCollider2D")
+        {
+            isPlayerOnSign = true;
+            chatOpen = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Player") 
+            && other.GetType().ToString() == "UnityEngine.BoxCollider2D")
+        {
+            isPlayerOnSign = false;
+            dialogBox.SetActive(false);
+            myChatItem.SetActive(true);
+
+            chatarray = 0;
+        }
+    }
+}
+```
+
 [.](https://github.com/ChengHan16/Game-Development/blob/main/Unity-Prologue/Code/Chat%20Box.md)
 [.](https://github.com/ChengHan16/Game-Development/blob/main/Unity-Prologue/Code/Chat%20Box.md)
 [.](https://drive.google.com/drive/folders/1SenjKaqiSICDc1Ea0iObWAcNkyQJHZeL?usp=sharing)
