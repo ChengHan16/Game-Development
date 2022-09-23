@@ -1,3 +1,4 @@
+### 單對話框顯示
 ```C#
 using System.Collections;
 using System.Collections.Generic;
@@ -43,7 +44,7 @@ public class Sign : MonoBehaviour
         OpenPosition = new Vector3(transform.position.x + 4.0f, transform.position.y + 4.0f, transform.position.z);
         dialogBox.transform.position = OpenPosition;
 
-        if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter) && isPlayerOnSign)
+        if (Input.GetKeyDown(KeyCode.Return) && isPlayerOnSign || Input.GetKeyDown(KeyCode.KeypadEnter) && isPlayerOnSign)
         {
             dialogBox.SetActive(true);
             myChatItem.SetActive(false);
@@ -66,8 +67,6 @@ public class Sign : MonoBehaviour
         {
             dialogBoxText.text = signText;
             isPlayerOnSign = true;
-
-            
         }
     }
 
