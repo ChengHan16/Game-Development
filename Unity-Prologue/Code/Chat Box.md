@@ -186,8 +186,8 @@ public class Sign : MonoBehaviour
 ```
 ---
 ## 完整版
-### 
-```
+### dialogBox
+```C#
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
