@@ -365,7 +365,7 @@ public class HintText : MonoBehaviour
 
 [.](https://github.com/ChengHan16/Game-Development/blob/main/Unity-Prologue/Code/Chat%20Box.md)
 [.](https://github.com/ChengHan16/Game-Development/blob/main/Unity-Prologue/Code/Chat%20Box.md)
-[.](https://drive.google.com/drive/folders/1SenjKaqiSICDc1Ea0iObWAcNkyQJHZeL?usp=sharing)
+[.]([https://drive.google.com/drive/folders/1SenjKaqiSICDc1Ea0iObWAcNkyQJHZeL?usp=sharing](https://drive.google.com/drive/folders/1TiVbADsiW1wIgNw5TkP0kGlrldsuC-mn?usp=sharing))
 [.](https://github.com/ChengHan16/Game-Development/blob/main/Unity-Prologue/Code/Chat%20Box.md)
 [.](https://github.com/ChengHan16/Game-Development/blob/main/Unity-Prologue/Code/Chat%20Box.md)
 [.](https://github.com/ChengHan16/Game-Development/blob/main/Unity-Prologue/Code/Chat%20Box.md)
