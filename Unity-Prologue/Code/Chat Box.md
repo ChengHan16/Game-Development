@@ -385,7 +385,7 @@ public class HintText : MonoBehaviour
 ### Chat Box II (Advanced / evolution)
 
 
-
+新增 TextMeshPro
 ![image](https://user-images.githubusercontent.com/55220866/192778855-e7cd4cc9-1589-490c-a9bd-44362365df97.png)
 
 ![image](https://user-images.githubusercontent.com/55220866/192778820-b000a6b3-1062-4c4b-9e55-02017967a0c9.png)
