@@ -383,12 +383,21 @@ public class HintText : MonoBehaviour
 [.](https://github.com/ChengHan16/Game-Development/blob/main/Unity-Prologue/Code/Chat%20Box.md)
 ----
 ### Chat Box II (Advanced / evolution)
-
-
-新增 TextMeshPro
-![image](https://user-images.githubusercontent.com/55220866/192778855-e7cd4cc9-1589-490c-a9bd-44362365df97.png)
-
 ![image](https://user-images.githubusercontent.com/55220866/192778820-b000a6b3-1062-4c4b-9e55-02017967a0c9.png)
+![image](https://user-images.githubusercontent.com/55220866/192779503-f1e2ff38-4eba-400a-aeb5-0b57b2f3da80.png)
+
+![image](https://user-images.githubusercontent.com/55220866/192778855-e7cd4cc9-1589-490c-a9bd-44362365df97.png)
+![image](https://user-images.githubusercontent.com/55220866/192779456-508cd6d0-5658-4a59-afcd-0f6e5df29db1.png)
+![image](https://user-images.githubusercontent.com/55220866/192779545-c019df0b-d381-4949-94b9-aea8b6994100.png)
+![image](https://user-images.githubusercontent.com/55220866/192779578-3145a0ea-cddc-4733-8543-dc511a0e7ca3.png)
+![image](https://user-images.githubusercontent.com/55220866/192779642-26fbafc0-7751-4197-8623-92a534a2f5c8.png)
+
+![image](https://user-images.githubusercontent.com/55220866/192779786-fee349ff-5946-4737-9ef0-e351c0cb52aa.png)
+
+![image](https://user-images.githubusercontent.com/55220866/192779678-c5d2b78d-1a9d-4e2a-9b7e-e23acfae81f8.png)
+![image](https://user-images.githubusercontent.com/55220866/192779695-254b0b7d-17cd-4ab5-979b-ef9b071625cf.png)
+![image](https://user-images.githubusercontent.com/55220866/192779720-3a98eca6-5af1-4b99-8da2-8dc2b6385f14.png)
+
 ![image](https://user-images.githubusercontent.com/55220866/192778958-a38a2ad2-c496-49f4-b20b-a381e2472d5b.png)
 ![image](https://user-images.githubusercontent.com/55220866/192779031-93cdda17-ec82-46a3-b20f-e8a34f9a3f73.png)
 ![image](https://user-images.githubusercontent.com/55220866/192779059-ebdc023b-3b66-414e-91f1-127ffcc63958.png)
