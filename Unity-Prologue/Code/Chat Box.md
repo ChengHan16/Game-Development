@@ -383,6 +383,18 @@ public class HintText : MonoBehaviour
 [.](https://github.com/ChengHan16/Game-Development/blob/main/Unity-Prologue/Code/Chat%20Box.md)
 ----
 ### Chat Box II (Advanced / evolution)
+
+
+
+![image](https://user-images.githubusercontent.com/55220866/192778855-e7cd4cc9-1589-490c-a9bd-44362365df97.png)
+
+![image](https://user-images.githubusercontent.com/55220866/192778820-b000a6b3-1062-4c4b-9e55-02017967a0c9.png)
+![image](https://user-images.githubusercontent.com/55220866/192778958-a38a2ad2-c496-49f4-b20b-a381e2472d5b.png)
+![image](https://user-images.githubusercontent.com/55220866/192779031-93cdda17-ec82-46a3-b20f-e8a34f9a3f73.png)
+![image](https://user-images.githubusercontent.com/55220866/192779059-ebdc023b-3b66-414e-91f1-127ffcc63958.png)
+![image](https://user-images.githubusercontent.com/55220866/192779135-4fdbfbaa-2370-4067-b653-d3dedb6d5ed3.png)
+
+
 ![image](https://user-images.githubusercontent.com/55220866/192778490-71224224-89ad-4cae-98bc-f19140ef150d.png)
 ```C#
 using System.Collections;
@@ -453,3 +465,4 @@ public class DialogueController : MonoBehaviour
     }
 }
 ```
+https://youtu.be/2JoCKldP_d0
