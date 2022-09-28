@@ -440,7 +440,7 @@ public class DialogueController : MonoBehaviour
         Debug.Log("DialogueNoEnter" + "：" + DialogueNoEnter);
 
 
-        //待解決，做物件套用處理，Unity Public Setting
+        //待解決，做物件套用處理，Unity Public Setting , 放在其他 Controller Update process
         if(Vector3.Distance(myPlayer.transform.position, coStar.transform.position) > 2.88f)
         {
             DialogueText.text = "";
