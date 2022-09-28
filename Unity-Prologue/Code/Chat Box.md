@@ -401,9 +401,9 @@ public class HintText : MonoBehaviour
 ![image](https://user-images.githubusercontent.com/55220866/192778958-a38a2ad2-c496-49f4-b20b-a381e2472d5b.png)
 ![image](https://user-images.githubusercontent.com/55220866/192779031-93cdda17-ec82-46a3-b20f-e8a34f9a3f73.png)
 ![image](https://user-images.githubusercontent.com/55220866/192779059-ebdc023b-3b66-414e-91f1-127ffcc63958.png)
+![image](https://user-images.githubusercontent.com/55220866/192780287-a8a4dd18-3ee8-4c70-be5c-9308575b04ad.png)
+
 ![image](https://user-images.githubusercontent.com/55220866/192779135-4fdbfbaa-2370-4067-b653-d3dedb6d5ed3.png)
-
-
 ![image](https://user-images.githubusercontent.com/55220866/192778490-71224224-89ad-4cae-98bc-f19140ef150d.png)
 ```C#
 using System.Collections;
