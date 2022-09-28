@@ -476,6 +476,7 @@ public class DialogueController : MonoBehaviour
 ```
 ### 待解決 [Chat Box II (Advanced / evolution)]
 ![image](https://user-images.githubusercontent.com/55220866/192780177-85e44a18-1e84-4879-9fb1-fb41334a821a.png)
+![image](https://user-images.githubusercontent.com/55220866/192787136-ef119ee7-1aaa-4180-a1b1-4ed30b2d3f57.png)
 
 
 https://youtu.be/2JoCKldP_d0
