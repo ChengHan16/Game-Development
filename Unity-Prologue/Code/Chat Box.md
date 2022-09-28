@@ -381,3 +381,75 @@ public class HintText : MonoBehaviour
 [.](https://github.com/ChengHan16/Game-Development/blob/main/Unity-Prologue/Code/Chat%20Box.md)
 [.](https://github.com/ChengHan16/Game-Development/blob/main/Unity-Prologue/Code/Chat%20Box.md)
 [.](https://github.com/ChengHan16/Game-Development/blob/main/Unity-Prologue/Code/Chat%20Box.md)
+----
+### Chat Box II (Advanced / evolution)
+![image](https://user-images.githubusercontent.com/55220866/192778490-71224224-89ad-4cae-98bc-f19140ef150d.png)
+```C#
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using TMPro;
+
+public class DialogueController : MonoBehaviour
+{
+    public TextMeshProUGUI DialogueText;
+    public GameObject coStar, myPlayer;
+    public string[] Sentences;
+    public float DialogueSpeed;
+
+    private int Index = 0;
+    private bool DialogueNoEnter = false;
+    
+    void Start()
+    {
+        
+    }
+
+    void Update()
+    {
+        if (!DialogueNoEnter)
+        {
+            if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter))
+            {
+                DialogueNoEnter = true;
+                NextSentece();
+            }
+        }
+        Debug.Log("Index" + "：" + Index);
+        Debug.Log("DialogueNoEnter" + "：" + DialogueNoEnter);
+
+
+        //待解決，做物件套用處理，Unity Public Setting
+        if(Vector3.Distance(myPlayer.transform.position, coStar.transform.position) > 2.88f)
+        {
+            DialogueText.text = "";
+            DialogueNoEnter = false;
+        }
+    }
+
+    void NextSentece()
+    {
+        if (Index <= Sentences.Length - 1)
+        {
+            DialogueText.text = "";
+            StartCoroutine("WriteSentence");
+        }
+        else
+        {
+            Index = 0;
+            DialogueNoEnter = false;
+        }
+    }
+
+    IEnumerator WriteSentence()
+    {
+        foreach(char Character in Sentences[Index].ToCharArray())
+        {
+            DialogueText.text += Character;
+            yield return new WaitForSeconds(DialogueSpeed);
+        }
+        DialogueNoEnter = false;
+        Index ++;
+    }
+}
+```
