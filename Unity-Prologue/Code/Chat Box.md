@@ -299,6 +299,8 @@ public class Sign : MonoBehaviour
     }
 }
 ```
+![image](https://user-images.githubusercontent.com/55220866/194001600-17e50eb0-dd5a-4ad4-ac3b-6df96b60b9d5.png)
+
 ### HintText
 ```C#
 using System.Collections;
