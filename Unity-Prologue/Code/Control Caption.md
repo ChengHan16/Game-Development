@@ -100,4 +100,6 @@ public class CaptionMove : MonoBehaviour
     }
 }
 ```
+![image](https://user-images.githubusercontent.com/55220866/194053388-312ca9ee-4bbf-4eee-a76a-420b61374a74.png)
+
 https://youtu.be/svHiOxPmT6I
