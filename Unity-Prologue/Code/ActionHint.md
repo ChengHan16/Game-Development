@@ -103,7 +103,8 @@ public class Movehint : MonoBehaviour
 }
 ```
 ![image](https://user-images.githubusercontent.com/55220866/195292408-2d037999-3552-4564-a0e5-a6bd0a7a0615.png)
-
+![image](https://user-images.githubusercontent.com/55220866/195292786-2d85599a-09fb-408c-b6ec-cba0f369226d.png)
+---
 #### ActionDescription
 ```C#
 using System.Collections;
@@ -218,6 +219,7 @@ public class ActionDescription : MonoBehaviour
 }
 ```
 ![image](https://user-images.githubusercontent.com/55220866/195292544-8bcb2e41-90f1-4c24-8679-b872ba7b7e3f.png)
+![image](https://user-images.githubusercontent.com/55220866/195292874-0a0c94b1-dfc7-42c9-b42f-5bbdd10fb00d.png)
 
 ![image](https://user-images.githubusercontent.com/55220866/195292624-cf406db2-a527-40d2-bc2a-2b61c40c55a4.png)
 
