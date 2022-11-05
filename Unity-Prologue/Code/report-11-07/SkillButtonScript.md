@@ -306,3 +306,209 @@ public class SkillButtonScript : MonoBehaviour
     }
 }
 ```
+### PlayerAttactCollider
+```C#
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class AttactCollider : MonoBehaviour
+{
+    public string newForm1Tag, newForm2Tag, newForm3Tag, trunTag;
+    public Text TagText;
+
+    Player playerScript;
+    SkillButtonScript skillScript;
+
+    private void Awake()
+    {
+        playerScript = Player.FindObjectOfType<Player>();
+        skillScript = GameObject.Find("SkillPanelCanvas/PlayerSkillPanel/Skill1/Skill1Script").GetComponentInParent<SkillButtonScript>();
+    }
+
+    private void Start()
+    {
+        gameObject.tag = "PlayerAttact";
+        StartCoroutine("reset");
+    }
+
+    private void Update()
+    {
+        //Debug.Log(gameObject.tag);
+
+        if (playerScript.changeType == 1)
+        {
+            gameObject.tag = newForm1Tag;
+            TagText.text = newForm1Tag;
+        }
+        else if (playerScript.changeType == 2)
+        {
+            gameObject.tag = newForm2Tag;
+            TagText.text = newForm2Tag;
+        }
+        else if (playerScript.changeType == 3)
+        {
+            gameObject.tag = newForm3Tag;
+            TagText.text = newForm3Tag;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (playerScript.changeType == 0 && skillScript.skillUIBar < 100)
+        {
+            if (collision.tag == "Enemy")
+            {
+                skillScript.skillUIBar += 50.85f;
+                PlayerSkillUIBar.SkillCurrent = skillScript.skillUIBar;
+            }
+        }
+
+        if (playerScript.changeType == 1 && skillScript.skillUIBar < 100)
+        {
+            if (collision.tag == "Enemy")
+            {
+                skillScript.skillUIBar += 10.5f;
+                PlayerSkillUIBar.SkillCurrent = skillScript.skillUIBar;
+            }
+        }
+
+        if (playerScript.changeType == 2 && skillScript.skillUIBar < 100)
+        {
+            if (collision.tag == "Enemy")
+            {
+                skillScript.skillUIBar += 15.5f;
+                PlayerSkillUIBar.SkillCurrent = skillScript.skillUIBar;
+            }
+        }
+
+        if (playerScript.changeType == 3)
+        {
+            if (collision.tag == "Enemy")
+            {
+                skillScript.skillUIBar += 18.5f;
+                PlayerSkillUIBar.SkillCurrent = skillScript.skillUIBar;
+            }
+        }
+    }
+
+    IEnumerator reset()
+    {
+        yield return new WaitForSeconds(0.01f);
+        this.gameObject.SetActive(false);
+    }
+}
+```
+### PlayerSkillUIBar
+```C#
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class PlayerSkillUIBar : MonoBehaviour
+{
+    public static float SkillCurrent;
+    public static float SkillMax;
+    public float SkillTimer;
+
+    private Image SkillBar;
+
+    SkillButtonScript skillScript;
+    bool DelaySkill;
+
+    private void Awake()
+    {
+        SkillBar = GetComponent<Image>();
+        skillScript = GameObject.Find("SkillPanelCanvas/PlayerSkillPanel/Skill1/Skill1Script").GetComponentInParent<SkillButtonScript>();
+
+        DelaySkill = true;
+    }
+
+    private void Start()
+    {
+        SkillMax = 100;
+
+        SkillTimer = 0;
+    }
+
+    void Update()
+    {
+        //Debug.Log("SkillTimer : " + SkillTimer);
+        //Debug.Log("skillScript.SetSkill1Bar : " + skillScript.SetSkill1Bar);
+
+        SkillBar.fillAmount = (float)SkillCurrent / (float)SkillMax;
+
+        if (skillScript.SetSkill1Bar && DelaySkill)
+        {
+            if (SkillTimer < 60)
+            {
+                DelaySkill = false;
+                SkillTimer += 1;
+
+                Player.FindObjectOfType<Player>().changeType = 1;
+                skillScript.skillUIBar = skillScript.skillUIBar - 1.0f;
+                SkillCurrent = skillScript.skillUIBar;
+
+                StartCoroutine("DelayShort");
+
+                if (SkillTimer >= 60)
+                {
+                    SkillTimer = 0;
+                    skillScript.SetSkill1Bar = false;
+                }
+            }
+        }
+
+        if (skillScript.SetSkill2Bar && DelaySkill)
+        {
+            if (SkillTimer < 40)
+            {
+                DelaySkill = false;
+                SkillTimer += 1;
+
+                Player.FindObjectOfType<Player>().changeType = 2;
+                skillScript.skillUIBar = skillScript.skillUIBar - 1.0f;
+                SkillCurrent = skillScript.skillUIBar;
+
+                StartCoroutine("DelayShort");
+
+                if (SkillTimer >= 40)
+                {
+                    SkillTimer = 0;
+                    skillScript.SetSkill2Bar = false;
+                }
+            }
+        }
+
+        if (skillScript.SetSkill3Bar && DelaySkill)
+        {
+            if (SkillTimer < 80)
+            {
+                DelaySkill = false;
+                SkillTimer += 1;
+
+                Player.FindObjectOfType<Player>().changeType = 3;
+                skillScript.skillUIBar = skillScript.skillUIBar - 1.0f;
+                SkillCurrent = skillScript.skillUIBar;
+
+                StartCoroutine("DelayShort");
+
+                if (SkillTimer >= 80)
+                {
+                    SkillTimer = 0;
+                    skillScript.SetSkill3Bar = false;
+                }
+            }
+        }
+    }
+
+    IEnumerator DelayShort()
+    {
+        yield return new WaitForSecondsRealtime(0.001f);
+        DelaySkill = true;
+    }
+}
+```
+## ----- SKILL END -----
