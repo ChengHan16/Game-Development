@@ -1,3 +1,27 @@
+### PlayerSkillPanel
+```C#
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class PLayerSkillPanel : MonoBehaviour
+{
+    Vector3 OpenPosition;
+
+    GameObject myPlayer;
+
+    private void Awake()
+    {
+        myPlayer = GameObject.Find("Player");
+    }
+
+    private void Update()
+    {
+        OpenPosition = new Vector3(myPlayer.transform.position.x + 3.0f, myPlayer.transform.position.y + 3.0f, myPlayer.transform.position.z);
+        transform.position = OpenPosition;
+    }
+}
+```
 ### SkillButtonScript
 ```C#
 using System.Collections;
