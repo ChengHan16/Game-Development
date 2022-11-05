@@ -511,4 +511,4 @@ public class PlayerSkillUIBar : MonoBehaviour
     }
 }
 ```
-## ----- SKILL END -----
+## ────────── SKILL END ──────────
