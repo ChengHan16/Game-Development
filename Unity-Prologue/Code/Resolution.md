@@ -1,3 +1,5 @@
+### 解析度設定、全螢幕模式選擇、垂直同步、FPS顯示
+### [Demo Video](https://youtu.be/VE3Q27oVn48)
 ```C#
 using System.Collections;
 using System.Collections.Generic;
@@ -77,7 +79,13 @@ public class ScreenController : MonoBehaviour
 
     public void ChangeFullScreen()
     {
+        if (Screen.fullScreenMode == FullScreenMode.ExclusiveFullScreen)
+        {
+            ddFruites.value = 1;
+            FullScreenBtn.isOn = false;
+        }
         Screen.fullScreen = !Screen.fullScreen; 
+
     }
 
     public void Vsync()
@@ -147,5 +155,10 @@ public class ScreenController : MonoBehaviour
         }
     }
 }
-
 ```
+### 參考資料：
+[Unity Documentation Screen](https://docs.unity3d.com/ScriptReference/Screen.html)
+[Unity Documentation Screen.currentResolution](https://docs.unity3d.com/ScriptReference/Screen-currentResolution.html)
+[Unity Documentation Screen.SetResolution](https://docs.unity3d.com/ScriptReference/Screen.SetResolution.html)
+[How to create an FPS display | Unity Tutorial](https://www.youtube.com/watch?v=xOCScMQIxrU)
+[how to see fps? (frames per second)](https://answers.unity.com/questions/1189486/how-to-see-fps-frames-per-second.html)
