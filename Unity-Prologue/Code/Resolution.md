@@ -1,5 +1,6 @@
 ### 解析度設定、全螢幕模式選擇、垂直同步、FPS顯示
 ### [Demo Video](https://youtu.be/VE3Q27oVn48)
+---------------------------------------------
 ```C#
 using System.Collections;
 using System.Collections.Generic;
@@ -156,6 +157,7 @@ public class ScreenController : MonoBehaviour
     }
 }
 ```
+---------------------------------------------
 ### 參考資料：
 [Unity Documentation Screen](https://docs.unity3d.com/ScriptReference/Screen.html) <br>
 [Unity Documentation Screen.currentResolution](https://docs.unity3d.com/ScriptReference/Screen-currentResolution.html) <br>
