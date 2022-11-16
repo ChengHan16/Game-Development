@@ -157,8 +157,8 @@ public class ScreenController : MonoBehaviour
 }
 ```
 ### 參考資料：
-[Unity Documentation Screen](https://docs.unity3d.com/ScriptReference/Screen.html)
-[Unity Documentation Screen.currentResolution](https://docs.unity3d.com/ScriptReference/Screen-currentResolution.html)
-[Unity Documentation Screen.SetResolution](https://docs.unity3d.com/ScriptReference/Screen.SetResolution.html)
-[How to create an FPS display | Unity Tutorial](https://www.youtube.com/watch?v=xOCScMQIxrU)
-[how to see fps? (frames per second)](https://answers.unity.com/questions/1189486/how-to-see-fps-frames-per-second.html)
+[Unity Documentation Screen](https://docs.unity3d.com/ScriptReference/Screen.html) <br>
+[Unity Documentation Screen.currentResolution](https://docs.unity3d.com/ScriptReference/Screen-currentResolution.html) <br>
+[Unity Documentation Screen.SetResolution](https://docs.unity3d.com/ScriptReference/Screen.SetResolution.html) <br>
+[How to create an FPS display | Unity Tutorial](https://www.youtube.com/watch?v=xOCScMQIxrU) <br>
+[how to see fps? (frames per second)](https://answers.unity.com/questions/1189486/how-to-see-fps-frames-per-second.html) <br>
