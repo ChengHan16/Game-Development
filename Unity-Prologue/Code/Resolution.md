@@ -1,5 +1,6 @@
 ### 解析度設定、全螢幕模式選擇、垂直同步、FPS顯示
 ### [Demo Video](https://youtu.be/VE3Q27oVn48)
+### [.](https://drive.google.com/drive/folders/1FyBM_qb7Kd9LSXcY58Hlt4gBqO9nDZ1I?usp=sharing)
 ---------------------------------------------
 ```C#
 using System.Collections;
