@@ -46,3 +46,6 @@ Title 參考資料： <br>
 [橫向捲軸遊戲/Side-scrolling video game](https://zh.wikipedia.org/wiki/%E6%A9%AB%E5%90%91%E6%8D%B2%E8%BB%B8%E9%81%8A%E6%88%B2)
 
 
+#### PlayerPrefs
+PlayerPrefs 參考資料：
+[Unity 中保存遊戲數據的不同方法/Breaking Down the Different Ways to Save Game Data in Unity](https://www.gamedesigning.org/learn/unity-save-game/#Fundamental-Unity-Save-Game-Concepts)
