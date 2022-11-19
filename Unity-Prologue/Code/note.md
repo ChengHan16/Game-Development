@@ -41,7 +41,7 @@ public class PlayerHealthBar : MonoBehaviour
 > Unity 2D Plane Action-adventure game [Prologue] <br>
 >> Unity 2D 平面動作冒險遊戲 [序章] <br>
 ------------------------------------------------------------------
-Title 參考資料：
+Title 參考資料： <br>
 [平台遊戲/Platform game](https://zh.wikipedia.org/wiki/%E5%B9%B3%E5%8F%B0%E6%B8%B8%E6%88%8F) <br>
 [橫向捲軸遊戲/Side-scrolling video game](https://zh.wikipedia.org/wiki/%E6%A9%AB%E5%90%91%E6%8D%B2%E8%BB%B8%E9%81%8A%E6%88%B2)
 
