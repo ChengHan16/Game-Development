@@ -49,3 +49,6 @@ Title 參考資料： <br>
 ### PlayerPrefs
 PlayerPrefs 參考資料：
 [Unity 中保存遊戲數據的不同方法/Breaking Down the Different Ways to Save Game Data in Unity](https://www.gamedesigning.org/learn/unity-save-game/#Fundamental-Unity-Save-Game-Concepts)
+
+### 遊戲硬體參考
+[ICEY](https://store.steampowered.com/app/553640/ICEY/)
