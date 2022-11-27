@@ -1,5 +1,5 @@
 ### 即時調整音量 Code
-```
+```C#
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
