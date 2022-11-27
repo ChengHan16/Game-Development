@@ -31,7 +31,7 @@ public class VolumeController : MonoBehaviour
     }
 }
 ```
-
+--------------------------------------------------------------------
 ### 待處理更新
 將音量儲存 PlayerPrefs Method
 ```C#
