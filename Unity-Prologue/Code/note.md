@@ -52,3 +52,8 @@ PlayerPrefs 參考資料：
 
 ### 遊戲硬體參考
 [ICEY](https://store.steampowered.com/app/553640/ICEY/)
+------------------
+### [Smooth Slider Bar In Unity (JUST ONE LINE OF CODE) - Mathf.SmoothDamp()](https://www.youtube.com/watch?v=VZ1EAHLd24M)
+### [Character Selection (And changing scene) - Unity 3D[Tutorial][C#]](https://www.youtube.com/watch?v=IFTjcPvCZaM&list=PLD078QdocaDaGgg2hKEtNZXtZhQMxUAFs&index=2&t=8s)
+### [Unity Character/Skin Selection Menu - Easy Unity Tutorial](https://www.youtube.com/watch?v=2PKBChN10us&list=PLD078QdocaDaGgg2hKEtNZXtZhQMxUAFs&index=2)
+
