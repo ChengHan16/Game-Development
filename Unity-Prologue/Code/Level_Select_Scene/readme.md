@@ -131,3 +131,7 @@ public class SelectSenceButtonScript : MonoBehaviour
 }
 ```
 ![image](https://user-images.githubusercontent.com/55220866/206216805-5a9b64d4-f13d-4645-9e60-a26758bf1910.png)
+---------------------------------------------------------------
+### 優化
+
+### [How to get name of button that was clicked?](https://answers.unity.com/questions/828666/46-how-to-get-name-of-button-that-was-clicked.html)
