@@ -131,6 +131,10 @@ public class SelectSenceButtonScript : MonoBehaviour
 }
 ```
 ![image](https://user-images.githubusercontent.com/55220866/206216805-5a9b64d4-f13d-4645-9e60-a26758bf1910.png)
+
+### 參考資料
+---------------------------------------------------------------
+[Array](https://docs.unity3d.com/2020.1/Documentation/ScriptReference/Array.html)
 ---------------------------------------------------------------
 ### 優化
 
