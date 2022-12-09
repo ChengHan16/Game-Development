@@ -376,8 +376,6 @@ public class SelectSenceButtonScript : MonoBehaviour
 ```
 ![image](https://user-images.githubusercontent.com/55220866/206658111-4a4b265e-aa72-4d20-99d0-fe5ad8111e32.png)
 ![image](https://user-images.githubusercontent.com/55220866/206658231-273b021e-2867-4a75-902e-cf5f20de46e8.png)
-```
-
 
 ### 參考資料
 
