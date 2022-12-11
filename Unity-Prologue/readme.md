@@ -9,3 +9,6 @@
 ### Development Method
 [Unity中對UGUI的Image進行傾斜變形](https://blog.csdn.net/linxinfa/article/details/123378696)
 [Creating a Custom Tab System in Unity](https://www.youtube.com/watch?v=211t6r12XPQ)
+
+[START MENU in Unity](https://www.youtube.com/watch?v=zc8ac_qUXQY)
+[How to make a LOADING BAR in Unity](https://www.youtube.com/watch?v=YMj2qPq9CP8)
