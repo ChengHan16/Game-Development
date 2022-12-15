@@ -26,3 +26,4 @@ if (Input.GetKeyDown(KeyCode.Escape) && !settingPanel.activeSelf)
    }
 }
 ```
+參考資料：Chris' Tutorials [Open and Close Menus with Buttons or Escape Key | Unity 2018 Game Development](https://www.youtube.com/watch?v=aN11LnlF89I)
