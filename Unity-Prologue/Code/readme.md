@@ -10,6 +10,7 @@ foreach (KeyCode vKey in System.Enum.GetValues(typeof(KeyCode)))
 }
 ```
 ### 使用按鈕開啟菜單和關閉
+`selectPanel.SetActive(!selectPanel.activeSelf);`
 ```C#
 if (Input.GetKeyDown(KeyCode.Escape) && !settingPanel.activeSelf)
 {
