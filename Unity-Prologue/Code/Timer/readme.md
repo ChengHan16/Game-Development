@@ -1,15 +1,15 @@
 ```C#
 
 ```
-[How to create a Timer [Tutorial][C#] - Unity 3d](https://www.youtube.com/watch?v=x-C95TuQtf0)
+參考資料：[How to create a Timer [Tutorial][C#] - Unity 3d](https://www.youtube.com/watch?v=x-C95TuQtf0)
 ```C#
 
 ```
-[Simple Countdown Timer with Circular Progressbar [ Unity Tutorial ]](https://www.youtube.com/watch?v=2gPHkaPGbpI)
+參考資料：[Simple Countdown Timer with Circular Progressbar [ Unity Tutorial ]](https://www.youtube.com/watch?v=2gPHkaPGbpI)
 ```C#
 
 ```
-[Working with Time in Unity](https://www.youtube.com/watch?v=ijAN0QI70UU)
+參考資料：[Working with Time in Unity](https://www.youtube.com/watch?v=ijAN0QI70UU)
 ```C#
 using System.Collections;
 using System.Collections.Generic;
@@ -61,5 +61,4 @@ public class Timer : MonoBehaviour
     }
 }
 ```
-參考資料：
-[Unity 倒數計時製作教學](http://www.cg.com.tw/UnityCSharp/Content/Timer.php)
+參考資料：[Unity 倒數計時製作教學](http://www.cg.com.tw/UnityCSharp/Content/Timer.php)
