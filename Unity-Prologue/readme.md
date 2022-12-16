@@ -17,5 +17,5 @@
 [How to make a LOADING BAR in Unity](https://www.youtube.com/watch?v=YMj2qPq9CP8)
 ------------------------
 ### [遊戲內容英文類別表達名稱](https://www.zhihu.com/question/325164094)
-關卡是`Level`
+關卡`Level`
 Episode，Chapter章節，Mission任務
