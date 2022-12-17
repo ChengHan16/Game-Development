@@ -27,6 +27,265 @@ public class PlayerHealthBar : MonoBehaviour
     }
 }
 ```
+### 2022-12-18 EnemyBoss (Script-Back-Up) [04:33 a.m]
+```C#
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class EnemyBoss : MonoBehaviour
+{
+    bool isAlive, isIdle, jumpAttact, isJumpUp, slideAttact, isHurt, canBeHurt;
+    public int life;
+    public float attactDistance, jumpHeight, jumpUpSpeed, jumpDownSpeed, slideSpeed,fallDownSpeed;
+
+    [Header("CanBeHurt")]
+    public float CanBeHurtTime;
+
+    GameObject player;
+    Animator myAnim;
+    BoxCollider2D myCollider;
+    SpriteRenderer mySr;
+
+    Vector3 slideTargetPosition;
+
+    private void Awake()
+    {
+        isAlive = true;
+        isIdle = true;
+        isHurt = false;
+        jumpAttact = false;
+        isJumpUp = true;
+        slideAttact = false;
+        canBeHurt = true;
+
+        player = GameObject.Find("Player");
+        myAnim = GetComponent<Animator>();
+        myCollider = GetComponent<BoxCollider2D>();
+        mySr = GetComponent<SpriteRenderer>();
+    }
+
+    private void Start()
+    {
+        BossLife.HealthCurrent = life;
+        BossLife.HealthMax = life;
+    }
+
+    void Update()
+    {
+        if (isAlive)
+        {
+            if (isIdle)
+            {
+                LookAtPlayer();
+
+                if (Vector3.Distance(player.transform.position, transform.position) <= attactDistance)
+                {
+                    isIdle = false;
+                    StartCoroutine("IdleToSlideAttact");
+                }
+                else
+                {
+                    isIdle = false;
+                    StartCoroutine("IdleToJumpAttact");
+                }
+            }
+            else if (jumpAttact)
+            {
+                LookAtPlayer();
+
+                if (isJumpUp)
+                {
+                    Vector3 myTarget = new Vector3(player.transform.position.x, jumpHeight, transform.position.z);
+                    transform.position = Vector3.MoveTowards(transform.position, myTarget, jumpUpSpeed * Time.deltaTime);
+
+                    myAnim.SetBool("JumpUp", true);
+                }
+                else
+                {
+                    myAnim.SetBool("JumpUp", false);
+                    myAnim.SetBool("JumpDown", true);
+
+                    Vector3 myTarget = new Vector3(transform.position.x, -14.55f, transform.position.z);
+                    transform.position = Vector3.MoveTowards(transform.position, myTarget, jumpDownSpeed * Time.deltaTime);
+                }
+
+                if (transform.position.y == jumpHeight)
+                {
+                    isJumpUp = false;
+                }
+                else if (transform.position.y == -14.55f)
+                {
+                    jumpAttact = false;
+                    StartCoroutine("JumpDownToIdle");
+                }
+            }
+            else if (slideAttact)
+            {
+                myAnim.SetBool("Slide", true);
+                transform.position = Vector3.MoveTowards(transform.position, slideTargetPosition, slideSpeed * Time.deltaTime);
+
+                if (transform.position == slideTargetPosition)
+                {
+                    myCollider.offset = new Vector2(-0.008521557f, 0.009188652f);
+                    myCollider.size = new Vector2(0.8707628f, 2.879219f);
+                    myAnim.SetBool("Slide", false);
+                    slideAttact = false;
+                    isIdle = true;
+                }
+            }
+            else if (isHurt)
+            {
+                Vector3 myTagetPosition = new Vector3(transform.position.x, -14.55f, transform.position.z);
+                transform.position = Vector3.MoveTowards(transform.position, myTagetPosition, fallDownSpeed * Time.deltaTime);
+            }
+        }
+        else
+        {
+            Vector3 myTagetPosition = new Vector3(transform.position.x, -14.55f, transform.position.z);
+            transform.position = Vector3.MoveTowards(transform.position, myTagetPosition, fallDownSpeed * Time.deltaTime);
+        }
+    }
+
+    void LookAtPlayer()
+    {
+        if (player.transform.position.x > transform.position.x)
+        {
+            transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
+        }
+        else
+        {
+            transform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);
+        }
+    }
+
+    IEnumerator JumpDownToIdle()
+    {
+        yield return new WaitForSeconds(0.2f);
+        isIdle = true;
+        isJumpUp = true;
+        myAnim.SetBool("JumpUp", false);
+        myAnim.SetBool("JumpDown", false);
+    }
+
+    IEnumerator IdleToJumpAttact()
+    {
+        yield return new WaitForSeconds(0.5f);
+        jumpAttact = true;
+    }
+
+    IEnumerator IdleToSlideAttact()
+    {
+        yield return new WaitForSeconds(1.5f);
+        myCollider.offset = new Vector2(-0.008521557f, -0.8256693f);
+        myCollider.size = new Vector2(0.8707628f, 1.209503f);
+        slideTargetPosition = new Vector3(player.transform.position.x + 0.5f, transform.position.y, transform.position.z);
+        LookAtPlayer();
+        slideAttact = true;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "PlayerAttact")
+        {
+            if (canBeHurt)
+            {
+                life--;
+                BossLife.HealthCurrent = life;
+                isHurtClass();
+                if (life >= 1)
+                {
+
+                    isIdle = false;
+                    jumpAttact = false;
+                    slideAttact = false;
+                    isHurt = true;
+
+                    StopCoroutine("JumpDownToIdle");
+                    StopCoroutine("IdleToJumpAttact");
+                    StopCoroutine("IdleToSlideAttact");
+                    myAnim.SetBool("Hurt", true);
+                    Invoke("SetAnimHurtToFalse", 1.0f);
+                    Invoke("CanBeHurt", CanBeHurtTime);
+                }
+                else
+                {
+                    isAlive = false;
+                    myCollider.enabled = false;
+                    StopAllCoroutines();
+                    myAnim.SetBool("Die", true);
+
+                    Time.timeScale = 0.2f;
+                    Time.fixedDeltaTime = 0.002F * Time.timeScale;
+                    StartCoroutine("AfterDie");
+                }
+                canBeHurt = false;
+            }
+        }
+
+        if (collision.tag == "PlayerAttactForm3")
+        {
+            if (canBeHurt)
+            {
+                life-=50;
+                BossLife.HealthCurrent = life;
+                if (life >= 1)
+                {
+
+                    isIdle = false;
+                    jumpAttact = false;
+                    slideAttact = false;
+                    isHurt = true;
+
+                    StopCoroutine("JumpDownToIdle");
+                    StopCoroutine("IdleToJumpAttact");
+                    StopCoroutine("IdleToSlideAttact");
+                    myAnim.SetBool("Hurt", true);
+                    Invoke("SetAnimHurtToFalse", 1.0f);
+                    Invoke("CanBeHurt", CanBeHurtTime);
+                }
+                else
+                {
+                    isAlive = false;
+                    myCollider.enabled = false;
+                    StopAllCoroutines();
+                    myAnim.SetBool("Die", true);
+
+                    Time.timeScale = 0.2f;
+                    Time.fixedDeltaTime = 0.002F * Time.timeScale;
+                    StartCoroutine("AfterDie");
+                }
+                canBeHurt = false;
+            }
+        }
+    }
+
+    void SetAnimHurtToFalse()
+    {
+        myAnim.SetBool("Hurt", false);
+        myAnim.SetBool("JumpUp", false);
+        myAnim.SetBool("JumpDown", false);
+        myAnim.SetBool("Slide", false);
+
+        mySr.material.color = new Color(1.0f, 1.0f, 1.0f, 0.5f);
+        isHurt = false;
+        isIdle = true;
+    }
+
+    void CanBeHurt()
+    {
+        canBeHurt = true;
+        mySr.material.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
+    }
+
+    IEnumerator AfterDie()
+    {
+        yield return new WaitForSecondsRealtime(3.0f);
+        FadeInOut.instance.SceneFadeInOut("MainMenu");
+    }
+}
+```
+
 
 ### Report
 ------------------------------------------------------------------
