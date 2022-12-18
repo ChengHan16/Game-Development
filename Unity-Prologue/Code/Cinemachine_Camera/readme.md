@@ -1,5 +1,5 @@
 
-參考資料：
+### 參考資料：
 
 相機人我的超人 my Cinemachine Hero
 
@@ -9,3 +9,5 @@
 ```C#
 cinemachineframingTransposer = GetComponent<CinemachineVirtualCamera>().GetCinemachineComponent<CinemachineFramingTransposer>();
 ```
+--------------------------------------------------------------------------------------------------------------------------------
+[【Cinemachine 智能相機教程】VirtualCamera(二)：Body屬性](https://zhuanlan.zhihu.com/p/107212189)
