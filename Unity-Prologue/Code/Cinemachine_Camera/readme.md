@@ -1,7 +1,7 @@
 
 ### 參考資料：
 
-*相機人我的超人 my Cinemachine Hero*
+**相機人我的超人 my Cinemachine Hero**
 
 [How to change values from a script [ScreenX for example]?](https://forum.unity.com/threads/how-to-change-values-from-a-script-screenx-for-example.630844/)
 
