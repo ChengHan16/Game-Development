@@ -38,7 +38,16 @@
 ------------------------
 ### [Cinemachine_Camera](https://github.com/ChengHan16/Game-Development/tree/main/Unity-Prologue/Code/Cinemachine_Camera)
 
+```
+連續移動的輸入除了GetKey / GetButton，也可以使用GetAxis取得X或Y軸數據來設置。
 
+有GetAxis還有GetAxisRaw差別在於
+
+GetAxis回傳-1到1之間的浮點數，例如0.4。
+
+GetAxisRaw只回傳-1、0、1。
+```
+[unity使用者輸入(GetKey與GetButton)](https://ithelp.ithome.com.tw/m/articles/10263073)
 
 ### Unity Method of use
 [Scroll Rect](https://docs.unity3d.com/Packages/com.unity.ugui@1.0/manual/script-ScrollRect.html)
