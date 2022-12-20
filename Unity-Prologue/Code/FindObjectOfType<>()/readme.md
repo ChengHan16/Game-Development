@@ -4,7 +4,7 @@
 ```C#
 using System.Linq;
 Sign[] myDialogue;
-...    
+
 var ss = FindObjectsOfType<腳本名稱>().OfType<腳本名稱>();
 foreach (腳本名稱 s in ss) {
      ss = myDialogue;
