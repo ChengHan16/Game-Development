@@ -25,7 +25,7 @@ foreach (Sign s in ss)
         ScreenX = ScreenXValue;
         if (ScreenXValue > 0.3f)
         {
-              StartCoroutine(RightWaitAdd());
+            StartCoroutine(RightWaitAdd());
         }
         GetComponent<CinemachineVirtualCamera>().GetCinemachineComponent<CinemachineFramingTransposer>().m_ScreenX = ScreenX;
      }
