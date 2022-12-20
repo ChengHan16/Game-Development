@@ -1,4 +1,16 @@
 ### 使用 foreach loop 抓取預設物件腳本 **用於多個物件 PreFab**
+
+### 關鍵
+```C#
+ using System.Linq;
+ Sign[] myDialogue;
+ ...    
+var ss = FindObjectsOfType<腳本名稱>().OfType<腳本名稱>();
+foreach (腳本名稱 s in ss) {
+     ss = myDialogue;
+     Debug.Log("Object："+ s);
+}
+```
 ```C#
 var ss = FindObjectsOfType<Sign>().OfType<Sign>();
         foreach (Sign s in ss)
