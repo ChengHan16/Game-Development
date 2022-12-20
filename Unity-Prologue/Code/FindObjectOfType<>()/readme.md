@@ -14,6 +14,7 @@ foreach (腳本名稱 s in ss) {
 ------
 ```C#
 var ss = FindObjectsOfType<Sign>().OfType<Sign>();
+
 foreach (Sign s in ss)
 {
     ss = myDialogue;
