@@ -36,6 +36,9 @@
 按下：Ctrl + Shift + C
 
 ------------------------
+### Credit (creative arts)
+
+------------------------
 ### ???
 Unity 2D Game Why use a graphics card 3D
 []()
