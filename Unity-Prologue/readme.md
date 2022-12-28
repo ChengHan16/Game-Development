@@ -71,3 +71,131 @@ GetAxisRaw只回傳-1、0、1。
 ### [遊戲內容英文類別表達名稱](https://www.zhihu.com/question/325164094)
 關卡`Level`
 Episode，Chapter章節，Mission任務
+
+### PlayerSkill
+```C#
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class PlayerSkillUIBar : MonoBehaviour
+{
+    public static float SkillCurrent;
+    public static float SkillMax;
+    public float SkillTimer;
+
+    public Gradient gradient;
+
+    private Image SkillBar;
+
+    SkillButtonScript skillScript;
+    bool DelaySkill;
+
+    private void Awake()
+    {
+        SkillBar = GetComponent<Image>();
+        skillScript = GameObject.Find("SkillPanelCanvas/PlayerSkillPanel/Skill1/Skill1Script").GetComponentInParent<SkillButtonScript>();
+
+        DelaySkill = true;
+    }
+
+    private void Start()
+    {
+        SkillMax = 100;
+
+        SkillTimer = 0;
+    }
+
+    void Update()
+    {
+        //Debug.Log("SkillTimer : " + SkillTimer);
+        //Debug.Log("skillScript.SetSkill1Bar : " + skillScript.SetSkill1Bar);
+
+        SkillBar.fillAmount = (float)SkillCurrent / (float)SkillMax;
+
+        if (SkillCurrent >= 100f)
+        {
+            SkillBar.color = gradient.Evaluate(1.0f);
+        }
+        else if (SkillCurrent >= 60)
+        {
+            SkillBar.color = gradient.Evaluate(0.6f);
+        }
+        else if (SkillCurrent >= 40f)
+        {
+            SkillBar.color = gradient.Evaluate(0.4f);
+        }
+
+
+        if (skillScript.SetSkill1Bar && DelaySkill)
+        {
+            if (SkillTimer < 60)
+            {
+                DelaySkill = false;
+                SkillTimer += 1;
+
+                Player.FindObjectOfType<Player>().changeType = 1;
+                skillScript.skillUIBar = skillScript.skillUIBar - 1.0f;
+                SkillCurrent = skillScript.skillUIBar;
+
+                StartCoroutine("DelayShort");
+
+                if (SkillTimer >= 60)
+                {
+                    SkillTimer = 0;
+                    skillScript.SetSkill1Bar = false;
+                }
+            }
+        }
+
+        if (skillScript.SetSkill2Bar && DelaySkill)
+        {
+            if (SkillTimer < 40)
+            {
+                DelaySkill = false;
+                SkillTimer += 1;
+
+                Player.FindObjectOfType<Player>().changeType = 2;
+                skillScript.skillUIBar = skillScript.skillUIBar - 1.0f;
+                SkillCurrent = skillScript.skillUIBar;
+
+                StartCoroutine("DelayShort");
+
+                if (SkillTimer >= 40)
+                {
+                    SkillTimer = 0;
+                    skillScript.SetSkill2Bar = false;
+                }
+            }
+        }
+
+        if (skillScript.SetSkill3Bar && DelaySkill)
+        {
+            if (SkillTimer < 80)
+            {
+                DelaySkill = false;
+                SkillTimer += 1;
+
+                Player.FindObjectOfType<Player>().changeType = 3;
+                skillScript.skillUIBar = skillScript.skillUIBar - 1.0f;
+                SkillCurrent = skillScript.skillUIBar;
+
+                StartCoroutine("DelayShort");
+
+                if (SkillTimer >= 80)
+                {
+                    SkillTimer = 0;
+                    skillScript.SetSkill3Bar = false;
+                }
+            }
+        }
+    }
+
+    IEnumerator DelayShort()
+    {
+        yield return new WaitForSecondsRealtime(0.001f);
+        DelaySkill = true;
+    }
+}
+```
