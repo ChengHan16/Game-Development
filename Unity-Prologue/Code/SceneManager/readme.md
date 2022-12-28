@@ -1,6 +1,4 @@
 ### [SceneManager.LoadSceneAsync](https://docs.unity3d.com/ScriptReference/SceneManagement.SceneManager.LoadSceneAsync.html)
-
-
 ```C#
     void Update()
     {
@@ -20,3 +18,4 @@
         }
     }
 ```
+### [Unity異步加載場景SceneManager.LoadSceneAsync與AsyncOperation的使用](https://blog.csdn.net/qq_42462109/article/details/83096135)
