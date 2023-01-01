@@ -23,7 +23,7 @@
   - [x] 敵人
   - [x] 通關條件
 
-*Player ✚ life `100`*
+*Player ✚ life `100`| Skill：Not to*
 ------------------------
 - [x] 第二章【技能操作】
   - [x] 地圖佈置
@@ -31,7 +31,7 @@
   - [x] 敵人
   - [x] 通關條件
 
-*Player ✚ life `100`| Skill：Not to*
+*Player ✚ life `100` | Skill：Not to*
 ------------------------
 - [x] 第三章【基本關卡】
   - [x] 地圖佈置
@@ -39,7 +39,7 @@
   - [x] 教學內容
   - [x] 通關條件
 
-*Player ✚ life `250` | Skill：fully open*
+*Player ✚ life `250` | Skill：Not to*
 ------------------------
 - [x] 第四章【王關】
   - [x] 地圖佈置
@@ -47,7 +47,7 @@
   - [x] 教學內容
   - [x] 通關條件
 
-*Player ✚ life `1000`*
+*Player ✚ life `1000` | Skill：fully open*
 ------------------------
 - [x] 過關頁面
 - [ ] 玩家變身圖片、數值
