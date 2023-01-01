@@ -1,6 +1,6 @@
-### ≖‿≖ 
 
-### Ending
+
+### ≖‿≖  Ending
 ------------------------
 ### ● Actor Value Setting
 
