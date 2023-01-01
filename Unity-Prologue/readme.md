@@ -1,4 +1,11 @@
 ### Ending
+------------------------
+### Actor Value Setting
+
+**Common Enemy：Attact `25` 、 life `5`**
+**Shadow Assassin：Attact `50` 、 life `2`**
+  
+------------------------
 - [x] 主頁面
 - [x] 設定面板
 - [x] 關卡選擇頁面
