@@ -7,6 +7,8 @@
 **Common Enemy：Attact `25` 、 life `5`** 
 
 **Shadow Assassin：Attact `50` 、 life `2`**
+
+**Dark side：Attact `169` 、 life `1000`**
   
 ------------------------
 ### ● 場景完成進度
