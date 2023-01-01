@@ -1,11 +1,16 @@
+### ≖‿≖ 
+
 ### Ending
 ------------------------
-### Actor Value Setting
+### ● Actor Value Setting
 
-**Common Enemy：Attact `25` 、 life `5`**
+**Common Enemy：Attact `25` 、 life `5`** 
+
 **Shadow Assassin：Attact `50` 、 life `2`**
   
 ------------------------
+### ● 場景完成進度
+
 - [x] 主頁面
 - [x] 設定面板
 - [x] 關卡選擇頁面
@@ -50,14 +55,10 @@
 
 ## Other
 ---
-
-
 ### 叫出 Console 
 按下：Ctrl + Shift + C
-
 ------------------------
 ### Credit (creative arts)
-
 ------------------------
 ### ???
 Unity 2D Game Why use a graphics card 3D
