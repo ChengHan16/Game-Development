@@ -11,7 +11,7 @@
 |Dark side|169|1000|
 
 ------------------------
-### ● Player get hurt (Collision Enemy Tags)
+### ● Player get hurt (Collision Enemy Tags) || *For Script：Player [OnTriggerEnter2D]*
 
 |Tag|Hurt Value|
 |---|---|
