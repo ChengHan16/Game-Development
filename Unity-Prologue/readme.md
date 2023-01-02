@@ -44,7 +44,9 @@
   - [x] 敵人
   - [x] 通關條件
 
-*Player ✚ life `100` | Skill：Not to*
+|Player ✚Life|Skill State|
+|---|---|
+|100|Not to|
 
 ------------------------
 - [x] 第三章【基本關卡】
@@ -53,7 +55,9 @@
   - [x] 教學內容
   - [x] 通關條件
 
-*Player ✚ life `250` | Skill：Not to*
+|Player ✚Life|Skill State|
+|---|---|
+|250|Not to|
 
 ------------------------
 - [x] 第四章【王關】
@@ -62,7 +66,9 @@
   - [x] 教學內容
   - [x] 通關條件
 
-*Player ✚ life `1000` | Skill：fully open*
+|Player ✚Life|Skill State|
+|---|---|
+|1000|fully open|
 
 ------------------------
 - [x] 過關頁面
