@@ -9,7 +9,16 @@
 *Shadow Assassin：➹Attact `50` 、 ✚ life `5`*
 
 *Dark side：➹Attact `169` 、 ✚ life `500`*
-  
+------------------------
+### ● Player get hurt
+
+*Enemy：`10`*
+
+*CommonEnemyAttact：`35`*
+
+*ShadowAssassinAttact：`65`*
+
+*DarkSideAttact：`95`*
 ------------------------
 ### ● 場景完成進度
 
