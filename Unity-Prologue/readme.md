@@ -4,11 +4,17 @@
 ------------------------
 ### ● Actor Value Setting
 
+|Enemy_Name|➹ Attact Value|✚ Life Value|
+|---|---|---|
+|Common Enemy|25|5 ~ 20|
+|Shadow Assassin|50|5 ~ 8|
+|Dark side|169|1000|
+
 *Common Enemy：➹Attact `25` 、 ✚ life `8`*
 
 *Shadow Assassin：➹Attact `50` 、 ✚ life `5`*
 
-*Dark side：➹Attact `169` 、 ✚ life `500`*
+*Dark side：➹Attact `105` 、 ✚ life `500`*
 
 ------------------------
 ### ● Player get hurt (Collision Enemy Tags)
@@ -19,14 +25,6 @@
 |CommonEnemyAttact|35|
 |ShadowAssassinAttact|65|
 |DarkSideAttact|95|
-
-*Enemy：`10`*
-
-*CommonEnemyAttact：`35`*
-
-*ShadowAssassinAttact：`65`*
-
-*DarkSideAttact：`95`*
 
 ------------------------
 ### ● 場景完成進度
