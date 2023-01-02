@@ -4,7 +4,7 @@
 ------------------------
 ### ● Actor Value Setting
 
-|Enemy_Name|➹ Attact Value|✚ Life Value|
+|Actor Name|➹ Attact Value|✚ Life Value|
 |---|---|---|
 |Common Enemy|25|5 ~ 20|
 |Shadow Assassin|50|5 ~ 8|
