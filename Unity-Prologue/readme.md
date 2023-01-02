@@ -9,6 +9,7 @@
 *Shadow Assassin：➹Attact `50` 、 ✚ life `5`*
 
 *Dark side：➹Attact `169` 、 ✚ life `500`*
+
 ------------------------
 ### ● Player get hurt
 
