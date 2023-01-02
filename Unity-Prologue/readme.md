@@ -33,7 +33,9 @@
   - [x] 敵人
   - [x] 通關條件
 
-*Player ✚ life `100` | Skill：Not to*
+|Player ✚Life|Skill State|
+|---|---|
+|100|Not to|
 
 ------------------------
 - [x] 第二章【技能操作】
