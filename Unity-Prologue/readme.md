@@ -11,7 +11,14 @@
 *Dark side：➹Attact `169` 、 ✚ life `500`*
 
 ------------------------
-### ● Player get hurt
+### ● Player get hurt (Collision Enemy Tags)
+
+|Tag|Hurt Value|
+|---|---|
+|Enemy|10|
+|CommonEnemyAttact|35|
+|ShadowAssassinAttact|65|
+|DarkSideAttact|95|
 
 *Enemy：`10`*
 
