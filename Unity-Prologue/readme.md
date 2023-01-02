@@ -10,12 +10,6 @@
 |Shadow Assassin|50|5 ~ 8|
 |Dark side|169|1000|
 
-*Common Enemy：➹Attact `25` 、 ✚ life `8`*
-
-*Shadow Assassin：➹Attact `50` 、 ✚ life `5`*
-
-*Dark side：➹Attact `105` 、 ✚ life `500`*
-
 ------------------------
 ### ● Player get hurt (Collision Enemy Tags)
 
