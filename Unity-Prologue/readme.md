@@ -2,7 +2,7 @@
 
 ![PROLOGUE_DOWNLOAD](https://github.com/ChengHan16/Game-Development/blob/main/Unity-Prologue/Download_Img.png?raw=true)
 
-<a href="#" title="https://drive.google.com/drive/folders/12fk_TZRc2ip2G5pheyhCnR_cPJU4b605?usp=sharing"><img src="https://github.com/ChengHan16/Game-Development/blob/main/Unity-Prologue/Download_Img.png" alt="測試圖片" border="0"></a>
+<a href="#" title="https://drive.google.com/drive/folders/12fk_TZRc2ip2G5pheyhCnR_cPJU4b605?usp=sharing"><img src="https://github.com/ChengHan16/Game-Development/blob/main/Unity-Prologue/Download_Img.png" alt="https://drive.google.com/drive/folders/12fk_TZRc2ip2G5pheyhCnR_cPJU4b605?usp=sharing" border="0"></a>
 
 ### ≖‿≖  Ending
 ------------------------
