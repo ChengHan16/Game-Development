@@ -8,7 +8,7 @@
   width="200" 
   height="100">
 
-### ≖‿≖  Ending
+### 完結手續確認
 ------------------------
 ### ● Actor Value Setting
 
